@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>My personal page</title>
+</head>
+<body>
+     <div class="main">
+       <h1>
+        Anslem's Personal / portfolio site 
+       </h1>
+       
+        <div class="below-content">
+          <h2>
+            Hello, I'm Anslem<br><br>
+            <span>
+              Welcome to my site
+            </span>
+          </h2>
+        </div>
+     </div>
+     
+     <div class="explain">
+       Welcome,<b id="username"></b> to my personal or portfolio site.<br>
+       <div class="the-pic">
+         <img 
+          src="images/my-pic.jpg" 
+          alt="My picture" 
+          width="300" 
+          height="500" />
+       </div>
+       You might be wondering what this site is about. Well, it's for me to tell you about myself and my journey as a programmer and how I started .<br>
+       <p>
+         Below is a list of links for you to use and get in contact with me.
+       </p>
+     </div>
+     <div class="contact-lists">
+       <ul class="lists">
+         <li>
+           <a href="tel:08097456762">
+             Call me
+           </a>
+         </li>
+         <li>
+           <a href="https://www.facebook.com/profile.php?id=100077954386674">My facebook profile
+           </a>
+         </li>
+         <li>
+           <a href="#">
+             My instagram profile
+           </a>
+          </li>
+          <li>
+            <a href="https://www.gmail.com/anslem448@gmail.com">
+              Email me
+            </a>
+          </li>
+       </ul>
+       <p>
+         In the below section you will see some of the programming languages that i'm good in<br>And the ones that I'm still learning
+       </p>
+     </div>
+    <div class="languages-list">
+      <section class="pro">
+        <ul>
+          <li>HTML(very good)</li>
+          <li>CSS(good)</li>
+          <li>JAVASCRIPT(still learning)</li>
+          <li>REACT.JS(still learning)</li>
+          <li>DJANGO(still learning)</li>
+          <li>PYTHON(50% good but still learning)</li>
+        </ul>
+      </section>
+      <article>
+        This is all the programming languages that I know and some I'm curently learning.
+      </article>
+    </div>
+    <div class="more-details">
+      I might have not told you this but I'm a Nigerian and I'm also a programmer as you might have guessed.
+      <p>
+        I also have a youtube channel which you can check out with the link below.<br>
+        <b>
+        <a href="#">Clean codeX</a>
+        </b>
+        <br />I mainly show/broadcast programming related concepts and I also teach some programming languages on my channel. 
+      </p><br>
+      <p>
+        If you don't want to go through to the hastle of clicking on my email and going to my email,<br> You can click on the message icon below to send a message directly to my email. You might also want to send your email too.
+      </p>
+    </div>
+    
+    <div class="msg">
+      <div class="input-div">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <input
+          type="text"
+          placeholder="Send message...."
+          id="email-message"
+          required
+          /><br />
+          <button type="submit" id="send-btn">
+            Send
+          </button>
+      </form>
+    </div>  
+      <a href="javascript:void" onclick="showInput()">
+      <img 
+      src="images/msg-icon1.jpg" 
+      alt="message icon"
+      width="60"
+      height="60"
+      /></a>
+    </div>
+    <div class="more-details2">
+      <h3>MY JOURNEY</h3>
+      I told you early that I'm going to tell you about my journey as a programmer and how I started.<br>Well, I never break my promise. In this section you'll see the way my coding journey has been<br>and how I started.
+      <section class="journey">
+        My coding journey is a one to remember.<br>All my life I have always been coding with a mobile device  e.g phone.<br>This has been like a very big set back for me because, for example, I can only make mobile responsive sites but can't make it responsive for laptop screens, and large screens<br>
+        <hr />
+        I first started learning to code late july of 2022.<br>
+        I first started with c++ but I couldn't get anywhere coz it's a pretty complex language, so i quit it and moved to web development and i'm doing okay..ish <br>I first started with HTML and then moved to CSS and curently i'm still learning <abbr title="javascript">JS</abbr>.<br>
+        Apart from web dev I've also learnt some other languages like python, django and also reactjs.<br>I am currently focusing on javascript and React js.
+      </section>
+    </div>
+    
+    <div class="work">
+      <h3>Jobs I've done</h3>
+      <p>
+        Well, currently I've not had any job but I'm thinking of becoming a freelancer and start freelancing.<br />
+        Let me know what you think in your email.
+      </p>
+    </div>
+    
+    <div class="container projects">
+      <h3>My Projects</h3>
+      <p>
+        Below are some of the projects I've worked on in this year 2023.<br />
+        <div class="item">
+          <a href="#">
+            <img 
+            src="images/pass2.jpg"
+            height="500"
+            />
+          </a><br />
+          <b id="name">A passenger counter app</b>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img 
+            src="images/cal.jpg"
+            height="500"
+            alt="My calculator"
+            />
+          </a><br />
+          <b id="name">A simple calculator</b>
+        </div>
+        <div class="item">
+          <a href="#">
+            <img 
+            src="images/market.jpg"
+            height="500"
+            alt="An online market place"
+            />
+          </a><br />
+          <b id="name">An online market place</b>
+        </div>
+      </p>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
+    
+    <script>
+      function sendEmail(){
+          Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "username",
+            Password : "password",
+            To : 'them@website.com',
+            From : "you@isp.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+          }).then(
+            message => alert(message)
+);
+      }
+    </script>
+</body>
+</html>
